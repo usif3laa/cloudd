@@ -1,0 +1,7 @@
+FROM python:3.9
+WORKDIR /Cloud
+COPY . /Cloud
+RUN pip install --no-cache-dir nltk
+RUN python -m nltk.downloader stopwords
+
+CMD ["python","Cloud.py"]
